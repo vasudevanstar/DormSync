@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EA580C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DormSync Management System</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#0D9488', // Teal 600
+              'primary-focus': '#0F766E', // Teal 700
+              'primary-content': '#FFFFFF',
+              'secondary': '#EA580C', // Orange 600
+              'secondary-focus': '#C2410C', // Orange 700
+              'accent': '#F59E0B', // Amber 500
+              'dark-bg': '#000000', // Renamed from neutral to avoid conflict
+              'base-100': '#F8FAFC', // Slate 50
+              'base-200': '#F1F5F9', // Slate 100
+              'base-300': '#E2E8F0', // Slate 200
+              'info': '#3B82F6',
+              'success': '#10B981',
+              'warning': '#FBBF24',
+              'error': '#EF4444',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-in-up': 'slideInUp 0.5s ease-in-out',
+              'glow': 'glow 3s ease-in-out infinite',
+              'slide-in-left': 'slideInLeft 0.3s ease-out',
+              'pulse-once': 'pulseOnce 1.5s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+               slideInLeft: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0)' },
+              },
+              glow: {
+                '0%, 100%': {
+                  textShadow: '0 0 5px rgba(234, 88, 12, 0.5), 0 0 10px rgba(234, 88, 12, 0.5)',
+                  boxShadow: '0 0 10px rgba(234, 88, 12, 0.2)'
+                 },
+                '50%': { 
+                  textShadow: '0 0 20px rgba(245, 158, 11, 0.7), 0 0 30px rgba(245, 158, 11, 0.7)',
+                  boxShadow: '0 0 20px rgba(245, 158, 11, 0.4)'
+                },
+              },
+              pulseOnce: {
+                '0%, 100%': { 
+                  transform: 'scale(1)', 
+                  boxShadow: 'none' 
+                },
+                '50%': { 
+                  transform: 'scale(1.25)', 
+                  boxShadow: '0 0 20px rgba(234, 88, 12, 0.7)' 
+                },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.23.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.3.8",
+    "react-tsparticles": "https://aistudiocdn.com/react-tsparticles@^2.12.2",
+    "tsparticles-slim": "https://aistudiocdn.com/tsparticles-slim@^2.12.0",
+    "tsparticles-engine": "https://aistudiocdn.com/tsparticles-engine@^2.12.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-base-100 dark:bg-dark-bg text-neutral-800 dark:text-base-200">
+    <div id="root"></div>
+    <div id="modal-root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
