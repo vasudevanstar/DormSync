@@ -8,10 +8,10 @@ const users = {
     { id: 'Anant Gopal', password: '123456' },
   ],
   [Role.WARDEN]: [
-    { id: 'Anish', password: '123456' },
+    { id: 'Sadiyya', password: '123456' },
   ],
   [Role.TECHNICIAN]: [
-    { id: 'Pradeeep', password: '123456' },
+    { id: 'Pradeep', password: '123456' },
     { id: 'Vishnu', password: '123456' },
   ],
 };
